@@ -1,0 +1,44 @@
+#portfolio-row .cover-back{
+    /* background-size:cover; */
+    /* position: relative; */
+    max-width: 100%;
+    max-height: 400px;
+    cursor: pointer;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0, rgba(255, 255, 255, 1) 240px, rgba(255, 255, 255, 1) 290px), no-repeat;
+    /* transition : 0.8s ; */
+    /* opacity: 1;
+    overflow:hidden; */
+}
+
+.cont{
+    /* position: relative; */
+    /* overflow:hidden; */
+    background: aquamarine ;
+    
+}
+
+.cont-1{
+    background: linear-gradient(to left, rgba(194, 22, 22, 0) 0, rgba(207, 33, 33, 0.5) 240px, rgba(223, 10, 10, 0.1) 290px), url(http://lorempixel.com/output/animals-q-g-500-500-9.jpg) no-repeat;
+    overflow:hidden;
+    border: 5px solid;
+    min-width: 100%;    
+    min-height: 450px;
+}
+/* 
+#portfolio-row .parent-col{
+    overflow: hidden;
+} */
+
+
+.d-cont{
+    padding : 0 50px;
+}
+
+/* #portfolio-row .cover-back:hover {
+    /* opacity: 0; */
+    /* transform:scale(1.1) ;
+    scroll-behavior: smooth;
+    transition: 0.5s ; */
+   
+    /* max-width: 100%; */
+} */

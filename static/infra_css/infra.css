@@ -1,0 +1,104 @@
+
+html,body{
+    margin:0px;
+    width:100%;
+    /* background: #005c8d; */
+    scroll-behavior: smooth;
+}
+
+#head-title{
+    min-height:200px;
+    background: #005c8d;
+}
+
+#imgae-title .pad-image-row{
+    padding : 0 50px;
+    
+}
+
+#image-title .img-height{
+    min-height:400px;
+    padding: 0 250px;
+    background: #005c8d;
+    /* border-radius: 30px; */
+}
+
+#image-title .img-border{
+    border-radius:5px;
+}
+
+
+/* --------------------------------------------------- Explore to Admission -------------------------------------- */
+
+#explore-head-admission {
+    background: #005c8d;
+    min-height: 100px;
+    min-width : 100%;
+}
+
+#explore-head-admission .explore-admission{
+    padding : 50px 0 ;
+    min-width:100%;
+}
+
+/* --------------------------------------------------- Explore to Admission END -------------------------------------- */
+
+/* --------------------------------------------------- Infrastructure -------------------------------------- */
+
+#head-infra-section .img-height{
+    min-height:450px;
+
+}
+
+#head-infra-section{
+    background :#005c8d;
+}
+
+#head-infra-section .pad-row-this{
+    padding : 0 20px;
+}
+
+#head-infra-section .pad-row{
+    background:white;
+    border-radius: 15px;
+    
+}
+
+#head-infra-section .img-border{
+    border-radius:12px;
+}
+
+#head-infra-section .computer-title{
+    padding : 100px 0 0 ;
+
+}
+
+#head-infra-section .infra-wholerow{
+    padding : 50px 0 ;
+    background : white;
+    
+}
+
+#head-infra-section .playground-height{
+    min-height: 320px;
+}
+
+#head-infra-section .hall-height{
+    min-height: 340px;
+}
+
+#head-infra-section .computer-height{
+    min-height:350px;
+}
+
+#head-infra-section .text-pad-infra{
+    padding: 10px 0 ;
+}
+
+#head-infra-section .a{
+    transition:0.2s;
+}
+
+
+/* --------------------------------------------------- Infrastructure END -------------------------------------- */
+

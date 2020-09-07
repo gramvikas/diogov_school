@@ -1,0 +1,170 @@
+{% extends 'base.html' %}
+
+{% block title %} Latest News {% endblock title %}
+
+{% block body %}
+
+<body>
+    <style>
+    
+     .imaza{
+         margin-top: 20px;
+         margin-left: 80px;
+        
+     }
+
+     .co{
+        background-color:  #47d147;
+        width: 300px; 
+        height: 400px; 
+        margin-top: 20px;  
+        border: 1px solid;
+        padding: 10px; 
+        box-shadow: 7px 10px green;
+     } 
+     .colo{
+         color: white;
+         font-weight: 700;
+         border: 1px solid white;
+         box-shadow: 7px 10px green;
+
+     }
+
+     .sect{
+         background-color: peach;
+         /* width: 950px; 
+         height: 400px; */
+         margin-top: 20px;
+         margin-left: 80px;
+         border: 1px solid black;
+         box-shadow: 6px 9px gray;  
+     }
+     .co2{
+        background-color:  #006666;
+        width: 300px; 
+        height: 400px; 
+        margin-top: 20px;  
+        border: 1px solid;
+        padding: 10px; 
+        box-shadow: 7px 10px #003333;
+     }
+     .colo2{
+        color: white;
+         font-weight: 700;
+         border: 1px solid white;
+         box-shadow: 7px 10px #003333;     
+     }
+     .head{
+         color: #3973ac;
+     }
+
+     .blinking{
+    animation:blinkingText 1.2s infinite;
+     }
+    @keyframes blinkingText{
+    0%{     color: red;    }
+    49%{    color: red; }
+    60%{    color: transparent; }
+    99%{    color:transparent;  }
+    100%{   color: red;    }
+    }
+    .chan{
+        color: black;
+    }
+
+    .mar{
+        margin-top: 12px;
+    }
+
+
+
+
+    /*######## MOBILE ########*/
+    @media screen and (max-width:680px){
+     .imaza{
+       /* width: 50%;
+       height: 50%;
+       margin-left: 6px; */
+       display: none;
+
+     }
+     .col-4{
+       margin:14px
+     }
+    }
+
+
+    @media screen and (max-width:980px){
+     .imaza{
+       /* width: 50%;
+       height: 50%;
+       margin-left: 6px; */
+       display: none;
+
+     }
+     .col-4{
+       margin:14px
+     }
+    }
+
+
+
+
+
+    </style>
+
+<div class="row">
+    <div class="col-8">
+        {% for result in LatestNews_TopImage %}
+        
+        <img src="{{result.top_Image.url }}" alt="" height="400" width="950" class="imaza" >
+        {% endfor %}
+    </div>
+    <div class="col-4">
+        <div class="co move" >
+            <!-- Content here -->
+            <h2 class="text-center colo">Latest News</h2>
+            <br>
+            <b><span class="blinking">New</span></b>
+            {% for result_1 in LatestNews_box1 %}
+            <h6 class="chan">{{result_1.bullets}}</h6>
+            {% endfor %}
+          </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-8">
+       <div class="sect"> 
+        <h2 class="m-3 head">Welcome To Diogo Vas College</h2>
+        {% for result1 in LatestNews_column %}
+        <div class="media">
+            <img src="{{result1.Thumbnail_Image.url }} " width="200px" height="200px" class="pictars m-4" alt="...">
+           
+            <div class="media-body mt-4">
+                
+              <h5 class="mar">{{result1.description}}</h5>
+            </div>
+          </div>
+          {% endfor %}
+       </div> 
+    </div>
+    <div class="col-4">
+        <div class="co2" >
+            <!-- Content here -->
+            <h2 class="text-center colo2">Diary Dates</h2>
+            <br>
+            {% for result_2 in LatestNews_box2 %}
+            <h6 class="chan">{{result_2.bullet}}</h6>
+            {% endfor %}
+          </div>
+    </div>
+  </div>
+  
+
+  
+  
+</body>
+
+
+{% endblock body %}

@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block title %}About{% endblock title %}
+
+{% block body %}
+
+
+
+
+<div class="py-5">
+    <u class="fin"><h1 class="text-center display-4">Our Gallery</h1></u>
+    
+    </div>
+<div class="container ">
+<div class="row no-gutters gallerys">
+{% for results in Gallery %}
+<div class="col-lg-3 col-md-4 col-sm-6 col-12 ">
+<a href="{{results.Image.url }}" target="_blank">
+<img src="{{results.Image.url }}" alt="{{results.Image.url }}" title="{{results.Image.url }}" height="250" width="250"  ><br>
+</a>
+<h4 class="text-center">{{results.Img_title}} <br></h4>
+<hr>
+</div>
+{% endfor %}
+</div> 
+</div>
+
+
+{% endblock body %}

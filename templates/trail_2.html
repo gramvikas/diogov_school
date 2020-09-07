@@ -1,0 +1,118 @@
+{% extends 'base.html' %}
+
+{% block title %} About {% endblock title %}
+{% block body %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/f7e6faccc6.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'about_css/about_trail.css' %}">
+</head>
+<body>
+
+
+<div id="page-container" >
+    <div class="container">
+        <div class="row back-color ">
+            <div class="col-md-6 img-pad ">
+                <img src="{% static 'about_images/AV-room.jpg' %}" alt="" class="img-fluid img-1">
+            </div>
+            <div class="col-md-6">
+                <h1 class="font-s-1"><i class="fas fa-quote-left"></i> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam expedita iusto ducimus ut? "</h1>
+            </div>
+        </div>
+    </div>
+
+    <section id="logo-section">
+        <div class="logo-section">
+            <div class="row">
+                <div class="d-flex upper-logo">
+                    Lorem, ipsum dolor.
+                </div>
+                <div class="d-flex lower-logo">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis repudiandae est veniam deleniti assumenda porro ut! Nemo voluptatem ipsa dicta nesciunt laudantium cupiditate voluptate voluptatibus..
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="container">
+        <div class="row back-color">
+            <div class="col-md-6">
+                <h1 class="font-s-2"><i class="fas fa-quote-left"></i> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam expedita iusto ducimus ut? "</h1>
+            </div>
+            <div class="col-md-6 img-pad">
+                <img src="{% static 'about_images/AV-room.jpg' %}" alt="" class="img-fluid img-2">
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row back-color">
+            <div class="col-md-6 img-pad">
+                <img src="{% static 'about_images/AV-room.jpg' %}" alt="" class="img-fluid img-3">
+            </div>
+            <div class="col-md-6">
+                <h1 class="font-s-3"><i class="fas fa-quote-left"></i> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam expedita iusto ducimus ut? "</h1>
+            </div>
+        </div>
+    </div>
+
+    <!------------------------------------------------------------------------------------->
+
+
+<div id="bottom-cards" class="bottom-cards ">
+    <div class="row-md box">
+        <div class="bottom-box container">
+            <div class="col-md-4">
+                <div class="card-box-1">
+                    <img src=" {% static 'about_images/img-3-2-1.jpg' %} " alt="" class="card-img-1 img-fluid">
+                <div class="card-box-1-wrap-expand">    
+                    <div class="card-box-1-wrap ">
+                        <p class="text-center p1">Culture</p><p class="p1-extra ">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid atque, repellat quo temporibus sapiente recusandae.</p>  
+
+                        </div>
+                    </div> 
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card-box-2">
+                    <img src="{% static 'about_images/img-9-1.jpg' %}" alt="" class="card-img-1 img-fluid">
+                    <div class="card-box-2-wrap-expand">
+                        <div class="card-box-2-wrap">
+                            <p class="text-center p1">Sports</p><p class="p1-extra ">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid atque, repellat quo temporibus sapiente recusandae.</p>  
+                    </div>
+                </div>
+                </div>
+                
+            </div>
+            <div class="col-md-4">
+                <div class="card-box-3">
+                    <img src="{% static 'about_images/img-2-1-1.jpg' %}" alt="" class="card-img-1 img-fluid">
+                    <div class="card-box-3-wrap-expand">
+                        <div class="card-box-3-wrap">
+                            <p class="text-center p1">Education</p><p class="p1-extra ">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid atque, repellat quo temporibus sapiente recusandae.</p> 
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</div>
+
+    </div>
+
+    
+</body>
+</html>
+{% endblock body %}

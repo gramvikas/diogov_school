@@ -1,0 +1,264 @@
+body{
+    scroll-behavior: smooth;
+}
+
+
+#title-image .img-inside{
+    padding: 100px 400px;
+    width:100%;
+}
+
+#title-image .title-img{
+    min-height: 500px;
+}
+ /* ---------------------------------------------------------------------------------------- */
+
+#page-container .back-color{
+    background-color: #0a63b1;
+}
+
+#page-container .img-pad{
+    padding: 0 0 ;
+}
+
+#page-container .img-1{
+    /* background-size:cover; */
+    width: 100%;
+}
+
+#page-container .img-2{
+    width:100%;
+}
+
+
+#page-container .img-3{
+    width:100%;
+}
+
+#page-container .font-s-1{
+    color: white;
+    font-size: 40px;
+    padding: 20% 0;    
+}
+
+#page-container .font-s-2{
+    color: white;
+    font-size: 40px;
+    padding: 20% 0;    
+}
+
+#page-container .font-s-3{
+    color: white;
+    font-size: 40px;
+    padding: 20% 0;    
+}
+/* ---------------------  LOGO SECTION ------------ */
+
+#logo-section {
+    color: white;
+    background: #034680;
+    min-height: 250px;
+ 
+    display: inline-block;
+}
+
+#logo-section .logo-section{
+    padding: 5% 0 ;
+ 
+}
+
+#logo-section .upper-logo{
+    text-align: center;
+    font-size: 30px;
+    
+}
+
+#logo-section .lower-logo{
+    text-align: center;
+    font-size: 20px;
+}
+
+/* --------------------------BOTTOM CARDS-------------------------------------- */
+
+#bottom-cards .bottom-box{
+    padding:30px 0 ;
+}
+
+/* -------------------------------------card-box-1-------------------------------- */
+
+#bottom-cards .card-box-1{
+    width:100%;
+    height:350px;
+    /* border:solid 5px; */
+    position:relative;
+    border-radius: 5px;
+    overflow:hidden;
+    text-align:center;
+    cursor: pointer;
+}
+
+
+#bottom-cards .card-box-1-wrap-expand{
+    opacity:1;
+    position: absolute;
+    /* background : #fff; */
+    overflow:hidden;
+    color:white;
+    top:30%;
+    bottom: 0;
+    left:10%;
+    right:10%;
+
+}
+
+#bottom-cards .card-box-1-wrap-expand .p1{
+    color:#ffd200;
+    font-size: 30px;
+}
+
+#bottom-cards .card-box-1-wrap-expand .p1-extra{
+    display:none;
+    color: white;
+    text-align: center;
+}
+
+#bottom-cards .card-img-1{
+    background-size: cover;
+    min-width:450px;
+    min-height:350px;
+    border-radius: 5px;
+    justify-items: center;
+}
+
+#bottom-cards .card-box-1-wrap-expand:hover .p1-extra{
+    display:block;
+    /* transition-delay:1s; */
+    text-align:center;
+}
+
+#bottom-cards .card-box-1-wrap-expand:hover .card-box-1-wrap {
+    background : #034680;
+    top:30%;
+    bottom: 0;
+    left:5%;
+    right:5%;
+}
+
+#bottom-cards .card-box-1-wrap {
+    transition:0.5s;
+    opacity: 1;
+    background: #0a63b1;
+    position: absolute;
+    /* content: "Culture"; */
+    border-radius: 5px;
+    top:80%;
+    bottom:0;
+    left: 10px;
+    right: 10px;
+    /* border:solid 5px; */
+}
+
+/* -------------------------------------------card-box-2------------------------------------------ */
+
+#bottom-cards .card-box-2-wrap-expand{
+    opacity:1;
+    position: absolute;
+    /* background : #fff; */
+    /* color:white; */
+    top:30%;
+    bottom: 0;
+    left:10%;
+    right:10%;
+
+}
+
+#bottom-cards .card-box-2-wrap-expand:hover .card-box-2-wrap{
+    background : #034680;
+    top:30%;
+    bottom: 0;
+    left:5%;
+    right:5%;
+}
+
+#bottom-cards .card-box-2-wrap {
+    transition:0.5s;
+    opacity: 1;
+    background: #0a63b1;
+    position: absolute;
+    border-radius: 5px;
+    overflow:hidden;
+    color: white;
+    top:80%;
+    bottom:0;
+    left: 10px;
+    right: 10px;
+    /* border:solid 5px; */
+}
+
+#bottom-cards .card-box-2-wrap-expand .p1{
+    color:#ffd200;
+    font-size: 30px;
+}
+
+#bottom-cards .card-box-2{
+    width:100%;
+    height:350px;   
+    overflow:hidden;
+    border-radius: 5px;
+    text-align: center;
+    /* border:solid 5px;x */
+}
+
+
+/* ------------------------------------card-box-3------------------------------------------- */
+
+#bottom-cards .card-box-3-wrap-expand .p1{
+    color:#ffd200;
+    font-size: 30px;
+}
+
+
+
+#bottom-cards .card-box-3-wrap-expand{
+    opacity:1;
+    position: absolute;
+    /* background : #fff; */
+    /* color:white; */
+    top:30%;
+    bottom: 0;
+    left:10%;
+    right:10%;
+
+}
+
+#bottom-cards .card-box-3-wrap-expand:hover .card-box-3-wrap{
+    background : #034680;
+    top:30%;
+    bottom: 0;
+    left:5%;
+    right:5%;
+}
+
+#bottom-cards .card-box-3-wrap {
+    transition:0.5s;
+    opacity: 1;
+    background: #0a63b1;
+    position: absolute;
+    border-radius: 5px;
+    overflow:hidden;
+    color: white;
+    top:80%;
+    bottom:0;
+    left: 10px;
+    right: 10px;
+}
+
+
+#bottom-cards .card-box-3{
+    width:100%;
+    height:350px;
+    text-align:center;
+    border-radius: 5px;
+    overflow:hidden;
+    /* border:solid 5px; */
+}

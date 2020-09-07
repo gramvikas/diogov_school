@@ -1,0 +1,270 @@
+{% extends 'base.html' %}
+
+{% block title %}About{% endblock title %}
+
+{% block body %}
+
+<style>
+    /* CORE STYLES */
+:root {
+--primary-color: rgba(255,230,230, 0.10);
+--overlay-color: rgba(128, 0, 0, 0.85);
+--menu-speed: 0.75s;
+}
+
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body {
+line-height: 1.4;
+overflow-x: hidden !important; 
+}
+
+
+
+.showcase {
+background: var(--primary-color);
+height: 100vh;
+position: relative;
+}
+
+.layout{
+position: absolute;
+z-index: -1;
+width: 900px;
+
+}
+
+
+
+.card{
+width: 100%;
+display: flex;
+float: right;
+border: 2px solid maroon !important;
+
+margin-right: 90px;
+background: maroon !important;
+color: white;
+}
+
+li.list-group-item{
+background: maroon !important;
+}
+
+ul{
+text-align: center !important;
+}
+
+li a{
+
+color: yellow;
+}
+
+.heading{
+text-align: center;
+font-size: 65px;
+font-weight: 900;
+font-weight: bold;
+font-family: 'Permanent Marker', cursive;
+color: maroon;
+}
+@media screen and (max-width:600px){
+
+
+.card{
+margin: 35px;
+
+}
+
+.heading{
+font-size: 40px;
+margin: 5px;
+}
+
+{% comment %} div.row div.col-lg-8 h1.edit{
+width: 100%;
+} {% endcomment %}
+
+div.row div.col-lg-8 a.galleys{
+margin-left: 150px !important;
+
+}
+
+}
+
+div.row div.col-lg-8 u h1{
+margin-left: 50px !important;
+
+}
+
+div.con{
+position: relative;
+display: flex; 
+flex-wrap: wrap;
+margin-top: 25px;
+margin-left:150px;
+
+}
+
+
+
+
+.con_p{
+width:100px;
+height:200px;
+}
+
+.con .box{
+transition: 0.3s;
+}
+
+.con .box:hover{
+z-index: 1;
+transform: scale(1.25);
+box-shadow: 0 25px 40px rgba(0,0,0,0.5);
+
+}
+
+.edit{
+margin-top: 600px;
+margin-left:150px;
+margin-bottom:20px;
+font-family: 'Permanent Marker', cursive;
+
+}
+
+
+
+.galleys {
+margin: 300px;
+text-decoration: none;
+border: 2px solid black;
+padding:8px ;
+background:black;
+border-radius:5px;
+font-family: 'Permanent Marker', cursive;
+}
+
+div.col-lg-8 a:hover{
+color: crimson;
+text-decoration: none;
+}
+
+div.con div.content div.box{
+background-color: black;
+color: white;
+text-align: center;
+}
+</style>
+
+
+<div class="sec ">
+    <video  autoplay muted loop plays-inline class="layout">
+        <source src="/static/activ/impo1_1.mp4" type="video/mp4">
+    </video>
+</div>
+    
+    <h1 class="heading"> Our Activities </h1>
+   
+    
+   
+    <div class="card" style="width: 18rem;">
+        <img src="/static/activ/Maths quiz.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Maths Quiz</h5>
+          <p class="card-text">Maths quiz was conducted on 27th july 2020</p>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">News!</li>
+          <li class="list-group-item">updates</li>
+          <li class="list-group-item">upcoming activities</li>
+          <li class="list-group-item"><a href=""><i class="fa fa-angle-double-down fa-fw fa-3x" aria-hidden="true"></i>    </a></li>
+        </ul>
+      </div>
+
+      <div class="section col-lg-6">
+        <div class="row">
+            <div class="col-lg-8 col-md-4 col-sm-4 col-12"> 
+          
+            <u><h1 class="display-3 edit">Gallery</h1></u><a class="galleys"  href="/gallery">Album</a>
+            </div>
+        </div>
+          
+        <div class="con">
+        
+            <div class="box">
+                <div class="imgbx">
+                    <img src="/static/activ/Environment Tour1.jpg" alt="" width="200px" height="200px">
+                </div>
+                <div class="content">
+                    <div class="box">
+                        <h5> Environment Tour </h5>
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <div class="imgbx">
+                    <img src="/static/activ/Annual Sports Day2.jpg" alt="" width="200px" height="200px">
+                </div>
+                <div class="content">
+                    <div class="box">
+                        <h5> Sports Day </h5>
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <div class="imgbx">
+                    <img src="/static/activ/Community Camp2.jpg" alt="" width="200px" height="200px">
+                </div>
+                <div class="content">
+                    <div class="box">
+                        <h5> Community Camp </h5>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="box">
+                <div class="imgbx">
+                    <img src="/static/activ/Maths Workshop.jpg" alt="" width="200px" height="200px">
+                </div>
+                <div class="content">
+                    <div class="box">
+                        <h5> Maths Workshop </h5>
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <div class="imgbx">
+                    <img src="/static/activ/Swachata Abhiyaan at Thivim Station2.jpg" alt="" width="200px" height="200px">
+                </div>
+                <div class="content">
+                    <div class="box">
+                        <h5> Swachata Abhiyaan </h5>
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <div class="imgbx">
+                    <img src="/static/activ/Maths quiz.jpg" alt="" width="200px" height="200px">
+                </div>
+                <div class="content">
+                    <div class="box">
+                        <h5> Maths Quiz </h5>
+                    </div>
+                </div>
+            </div>
+            
+            </div>
+        </div>
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+{% endblock body %}

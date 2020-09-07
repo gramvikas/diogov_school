@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock title %}
+
+{% block body %}
+<style>
+  .chang{
+    margin-left: 80px;
+  }
+
+
+ 
+
+  @media screen and (max-width:1200px){
+  
+    .row{
+      display: block;
+      justify-content: center;
+      text-align: center;
+      align-content: center;
+    }
+
+  }
+
+  
+</style>
+<!-- Main page ka bg-->
+<div class="hero-text-box">
+  <h1 class="frontline-text">Hello there pranav bhat here,<br> how are you</h1>
+</div>
+</section>
+
+<!-- QUOTE SECTION STARTS HERE -->
+<section class="section-quote" id="quote">
+<div class="myquote"> 
+  <q>To be or not to be. That's the question! </q> <br> ~~ Pranav Bhat
+</div>
+</section>
+
+<!-- REVIEWS STARTS HERE -->
+<div class="reviews">
+  <h2 style="text-align: center;">MESSAGE FROM DESKS OF</h2>
+  
+<br>
+<br>
+
+
+
+  <div class="container ">
+    <div class="row">
+      {% for result in Index_Profile1 %}
+      <div class="col-lg-3 col-md-8 col-sm-8 mt-6 mb-5"><img src="{{result.Pic.url }}" class="mr-3 bor" alt="..." width="260px" height="430px" ></div>
+      <div class="col-lg-3 col-md-8 col-sm-8 mt-5 mb-5"><h4 class="mt-0">{{result.Pic_title }}</h4>
+       <h6> {{result.pic_desc }}</h6></div>
+        {% endfor %}
+    </div>
+  </div>
+{% endblock body %}

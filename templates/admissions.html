@@ -1,0 +1,246 @@
+{% extends 'base.html' %}
+
+{% block title %}About{% endblock title %}
+
+{% block body %}
+<body>
+    <style>
+        .jumbotron {
+            padding: 1rem !important;
+        }
+
+        .jumbotron * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .jumbotron .info {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .jumbotron .info p {
+            font-size: 2.5vmin;
+        }
+
+        .jumbotron .ban {
+            display: flex;
+            align-items: center;
+        }
+
+        .jumbotron h1 {
+            text-transform: uppercase;
+        }
+
+        .jumbotron img {
+            max-width: 100px;
+            margin-right: 1rem;
+        }
+    @media print{
+      .hidewhileprint{
+        display: none;
+      }
+    }
+
+    </style>
+
+    <div class="container p-0 form">
+        <div class="m-3 card p-3">
+            <div class="jumbotron bg-light">
+                <div class="ban">
+                    <img src="/static/img/logo.png" class="img-fluid" alt="">
+                    <div class="info">
+                        <h2>DIOGO VAS COLLEGE OF SCIENCE , COLVALE - GOA</h2>
+                        <p class="text-muted">Admission Form 2020</p>
+                        <h5 class="white hidewhileprint"><marquee >Please follow the form filling instructions <a href="/static/files/sample.pdf" target="_blank">(Click here)</a> | Admission for 2020-2021 session is now open!</marquee></h5>
+                    </div>
+                </div>
+            </div>
+        <form class = "admission" id = "admission_form" class="text-center " style="color: #000000;" method="POST" enctype="multipart/form-data">
+          {% csrf_token %}
+          
+          
+            <div class="row form-row">
+                <div class="col-lg-4 col-md-4 col-12">
+                    <label for="" class="mx-2 font-weight-bold">Student Name</label>
+                    <input type="text" name="name" id="name" placeholder="Full Name" class="form-control" required>
+                </div>
+            </div>
+          
+            
+            <div class="row mt-2 form-row">
+                <div class="col-lg-4 col-md-4 col-12 mt-2">
+                    <label for="" class="mx-2 font-weight-bold">EmailID</label>
+                    <input type="text" name="EmailID" id="EmailID" placeholder="Email Id" class="form-control" required>
+                </div>
+                <div class="col-lg-4 col-md-4 col-12 mt-2 ">
+                    <label for="" class="mx-2 font-weight-bold">Gender</label>
+                    <div class="d-flex align-items-center" style="height: 60% !important;">
+                        <div class="custom-control custom-radio custom-control-inline">
+                            <input type="radio" class="custom-control-input" id="male" value="MALE" name="gender" required>
+                            <label class="custom-control-label" for="male">Male</label>
+                        </div>
+                        <div class="custom-control custom-radio custom-control-inline">
+                            <input type="radio" class="custom-control-input" id="female" value="FEMALE" name="gender" required>
+                            <label class="custom-control-label" for="female">Female</label>
+                        </div>
+                        <div class="custom-control custom-radio custom-control-inline">
+                            <input type="radio" class="custom-control-input" id="other" value="OTHER" name="gender" required>
+                            <label class="custom-control-label" for="other">Other</label>
+                        </div>
+                    </div>
+                </div>
+            <div class="row mt-2 form-row">
+                <div class="col-lg-12 col-md-4 col-12 mt-2">
+                    <label for="" class="mx-2 font-weight-bold">Date of Birth</label>
+                    <input type="date" name="DoB" id="DoB" class="form-control" required>
+                </div>
+            </div>
+            </div>
+
+            <div class="row mt-2 form-row">
+                <div class="col-lg-10 col-md-6 col-12 ">
+                    <label for="" class="mx-2 font-weight-bold">Permanent Residential Address</label>
+                    <textarea name="Permanent_Address" id="Permanent_Address" rows="3" class="form-control" placeholder="Permanent Address" required></textarea>
+                </div>
+            </div>
+            <div class="row mt-2 form-row ml-3">
+                <div class="col-lg-4 col-md-4 col-12">
+                    <label for="" class="mx-2 font-weight-bold">Pin Code</label>
+                    <input type="text" name="PinCode" id="PinCode" placeholder="Pincode" class="form-control" required>
+                </div>
+                <div class="col-lg-4 col-md-8 col-12">
+                    <label for="" class="mx-2 font-weight-bold  hidewhileprint">Mobile No.</label>
+                    <input type="text" name="Mob_No" id="Mob_No" placeholder="Contact no." class="form-control" required>
+                </div>
+                <div class="col-lg-4 col-md-8 col-12">
+                    <label for="" class="mx-2 font-weight-bold  hidewhileprint">Guardians Contact No.</label>
+                    <input type="text" name="Parents_Mob_No" id="Parents_Mob_No" placeholder="Parents contact no." class="form-control" required>
+                </div>
+            </div>
+            <div class="row mt-2 form-row ml-3">
+                <div class="col-lg-4 col-md-4 col-12">
+                    <label for="" class="mx-2 font-weight-bold  hidewhileprint">Select HSSC Stream</label>
+                    <select name="HSSC_Stream" id="HSSC_Stream" class="form-control" required>
+                        <option value="">.........</option>
+                        <option value="1">Arts</option>
+                        <option value="2">Commerce</option>
+                        <option value="3">Science </option>
+                        <option value="4">Other</option>
+                    </select>
+                </div>
+                <div class="col-lg-4 col-md-8 col-12 ">
+                    <label for="" class="mx-2 font-weight-bold">Total Marks</label>
+                    <input type="text" name="Total_Marks" id="Total_Marks" placeholder="" class="form-control" required>
+                </div>
+                <div class="col-lg-4 col-md-8 col-12">
+                    <label for="" class="mx-2 font-weight-bold  hidewhileprint">Marks Obtained</label>
+                    <input type="text" name="Marks_Obtained" id="Marks_Obtained" placeholder="" class="form-control" required>
+                </div>
+            </div>
+            <div class="row mt-4 form-row">
+                <div class="col-lg-3 col-md-3 col-6 ">
+                    <label for="" class="mx-2 font-weight-bold">Student Photo</label>
+                    <input type="file" name="file" id="file" placeholder="" class="form-control  hidewhileprint" required>
+                </div>
+                <div class="col-lg-3 col-md-3 col-6 ml-3">
+                    <label for="" class="mx-2 font-weight-bold">HSSC Marksheet</label>
+                    <input type="file" name="file1" id="file1" placeholder="" class="form-control  hidewhileprint" required>
+                </div>
+                <div class="col-lg-3 col-md-3 col-6 ml-3">
+                    <label for="" class="mx-2 font-weight-bold">Resident Certificate</label>
+                    <input type="file" name="file2" id="file2" placeholder="" class="form-control  hidewhileprint" required>
+                </div>
+            
+
+            <div class="row mt-4">
+                <div class="col-12">
+                    <ul>
+                        <li>I hereby solemnly declare that all the statements made in the above form true
+                            and correct to the best of my knowledge & relief.</li>
+                        <li>I fully understand that in the event of any information being found false or
+                            incorrect,registration and admission of my son/daughter may be cancelled.</li>
+                        <li>I also declare that the date of birth and spelling of the name of my
+                            son/daughter are correctly given in this form and that I shall NOT make a
+                            request for any change later on. </li>
+                        <li>I am keen to have my son/daughter educated..</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row mt-2">
+                <div class="col-12">
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="defaultChecked2" required>
+                        <label class="custom-control-label text-danger" for="defaultChecked2">*I hearby
+                            agree to all the
+                            above terms & conditions and in addition to that of the school's.</label>
+                    </div>
+                </div>
+            </div>
+            
+
+
+            <div class="card-action mt-5 p-2 hidewhileprint">
+                <button type="submit" class="btn btn-primary">Submit Form</button>
+                <button id='printform' type="button" class="btn btn-secondary">Print Form</button>
+                <button type="reset" class="btn btn-danger">Reset</button>
+            </div>
+            <div class="row mt-1 hidewhileprint">
+                <div class="col-12">
+                    <p class="mx-2">By submitting the form you agree to the
+                        <a href="/static/files/sample.pdf" target="_blank" class="text-decoration-none">terms of
+                            admission</a>.
+                </div>
+            </div>
+        </form>
+      </div>
+  </div>
+</div>
+
+
+
+
+  <script type="text/javascript" src="/static/assets/js/jquery.min.js"></script>
+
+
+
+
+<script type="text/javascript">
+jQuery.fn.extend({
+        printElem: function () {
+            var cloned = this.clone();
+            var printSection = $('#printSection');
+            if (printSection.length == 0) {
+                printSection = $('<div id="printSection"></div>')
+                $('body').append(printSection);
+            }
+            printSection.append(cloned);
+            var toggleBody = $('body *:visible');
+            toggleBody.hide();
+            $('#printSection, #printSection *').show();
+            $("#link_proof").hide();
+            window.print();
+            printSection.remove();
+            toggleBody.show();
+        }
+    });
+
+$(document).ready(function(){
+    $(document).on('click', '#printform', function(){
+        $(".form").printElem();
+    });
+});
+
+</script>
+    {% endblock body %}
+  	<script src="/static/assets/js/core/popper.min.js"></script>
+  	<script src="/static/assets/js/bootstrap.min.js"></script>
+      <script src="/static/assets/js/mdb.min.js"></script>
+
+        <!-- Specific JS goes HERE -->
+        {% block javascripts %}{% endblock javascripts %}
+
+</body>
+
+    </html>
